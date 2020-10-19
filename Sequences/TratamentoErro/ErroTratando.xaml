@@ -1,0 +1,96 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ErroTratando" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="496,544" sap2010:WorkflowViewState.IdRef="ErroTratando_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ErroTratando" sap:VirtualizedContainerService.HintSize="476,484" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OnImageAppear ContinueOnError="{x:Null}" FoundElement="{x:Null}" DisplayName="On Image Appear 'smartclient.exe TOTVS'" sap:VirtualizedContainerService.HintSize="434,392" sap2010:WorkflowViewState.IdRef="OnImageAppear_2" RepeatForever="False">
+      <ui:OnImageAppear.Body>
+        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,246" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'QWidget'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="855bce4e880fa3b3cce721e237627e03" Selector="&lt;wnd app='smartclient.exe' cls='QWidget' title='TOTVS Serviços *' /&gt;&lt;wnd cls='QWidget' idx='3' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:SendHotkey.Target>
+          </ui:SendHotkey>
+        </Sequence>
+      </ui:OnImageAppear.Body>
+      <ui:OnImageAppear.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.6" Profile="Basic" TargetImageBase64="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" />
+      </ui:OnImageAppear.Image>
+      <ui:OnImageAppear.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='smartclient.exe' cls='QWidget' title='TOTVS Serviços*' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:OnImageAppear.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:OnImageAppear>
+  </Sequence>
+</Activity>

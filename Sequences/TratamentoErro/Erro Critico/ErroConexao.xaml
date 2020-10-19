@@ -1,0 +1,100 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ErroConexao" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="583,754" sap2010:WorkflowViewState.IdRef="ErroConexao_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ErroConexao" sap:VirtualizedContainerService.HintSize="563,694" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="ExisteErro" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ImageFound DisplayName="" Found="[ExisteErro]" sap:VirtualizedContainerService.HintSize="521,106" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+      <ui:ImageFound.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+      </ui:ImageFound.Image>
+      <ui:ImageFound.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='smartclient.exe' cls='QWidget' title='TOTVS | build *' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:ImageFound.Target>
+    </ui:ImageFound>
+    <If Condition="[ExisteErro]" sap:VirtualizedContainerService.HintSize="521,456" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,308" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="s:Exception" Default="[New System.Exception(&quot;Server Down&quot;)]" Name="Exception" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'smartclient.exe TOTVS'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f9be67fdb6167c8bb3f045aee220783b" Selector="&lt;wnd app='smartclient.exe' cls='QWidget' title='TOTVS | build 7.00.131227A' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:SendHotkey.Target>
+          </ui:SendHotkey>
+          <Throw Exception="[Exception]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+        </Sequence>
+      </If.Then>
+    </If>
+  </Sequence>
+</Activity>
